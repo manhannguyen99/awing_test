@@ -19,21 +19,13 @@ const Step1 = () => {
   if (!value) return <></>;
   return (
     <>
-      <FormInput
-        label="Name"
-        name_key="name"
-        error={value.submitted && !info.name}
-      >
+      <FormInput label="Name" value_input={info.name} required>
         <input
           value={info.name}
           onChange={(e) => setInfo({ ...info, name: e.target.value })}
         />
       </FormInput>
-      <FormInput
-        label="Title"
-        name_key="title"
-        error={value.submitted && !info.title}
-      >
+      <FormInput label="Title" value_input={info.title} required>
         <input
           value={info.title}
           onChange={(e) => setInfo({ ...info, title: e.target.value })}

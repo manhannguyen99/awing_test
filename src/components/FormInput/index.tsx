@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { styled } from "styled-components";
+import { AppContext } from "../../contexts";
 
 type TProps = {
   label: string;
-  name_key: string;
   children: React.ReactNode;
   error?: boolean;
+  value_input?: string;
+  required?: boolean;
 };
 
-const FormInput = ({ label, name_key, children, error }: TProps) => {
+const FormInput = ({
+  label,
+  value_input,
+  children,
+  error,
+  required,
+}: TProps) => {
+  const value = useContext(AppContext);
+  if (!value) return <></>;
   return (
     <S>
       <span className="label">{label}</span>
       {children}
-      {error && <p>Error</p>}
+      {required && (error || value.submitted) && !value_input && <p>Error</p>}
     </S>
   );
 };

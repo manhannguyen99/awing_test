@@ -10,26 +10,26 @@ export type TProps = {
 
 const Template1 = ({ handleChangeInput, item }: TProps) => {
   const data = item?.data as TTemp1;
-  const value = useContext(AppContext);
   return (
     <>
       <FormInput
         label="Email"
-        name_key="email"
-        error={(item.error || value?.submitted) && !data?.email}
+        value_input={data?.email}
+        error={item.error}
+        required
       >
         <input
           onChange={(e) => handleChangeInput("email")(e.target.value)}
           value={data?.email}
         />
       </FormInput>
-      <FormInput label="Age" name_key="age">
+      <FormInput label="Age">
         <input
           onChange={(e) => handleChangeInput("age")(e.target.value)}
           value={data?.age}
         />
       </FormInput>
-      <FormInput label="Gender " name_key="gender">
+      <FormInput label="Gender">
         <input
           onChange={(e) => handleChangeInput("gender")(e.target.value)}
           value={data?.gender}

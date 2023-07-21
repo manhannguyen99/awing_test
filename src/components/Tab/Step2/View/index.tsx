@@ -33,8 +33,9 @@ const View = ({ item, handleChangeValue }: TProps) => {
         {" "}
         <FormInput
           label="Template"
-          name_key="template"
-          error={(item.error || value?.submitted) && !item.template}
+          value_input={item?.template ?? ""}
+          error={item.error}
+          required
         >
           <select
             value={item?.template}

@@ -6,15 +6,10 @@ import { AppContext } from "../../../../../contexts";
 
 const Template2 = ({ item, handleChangeInput }: TProps) => {
   const data = item?.data as TTemp2;
-  const value = useContext(AppContext);
 
   return (
     <>
-      <FormInput
-        label="Id"
-        name_key="id"
-        error={(item.error || value?.submitted) && !data?.id}
-      >
+      <FormInput label="Id" value_input={data?.id} error={item.error} required>
         <input
           onChange={(e) => handleChangeInput("id")(e.target.value)}
           value={data?.id}
@@ -22,15 +17,16 @@ const Template2 = ({ item, handleChangeInput }: TProps) => {
       </FormInput>
       <FormInput
         label="Username"
-        name_key="username"
-        error={(item.error || value?.submitted) && !data?.username}
+        value_input={data?.username}
+        error={item.error}
+        required
       >
         <input
           onChange={(e) => handleChangeInput("username")(e.target.value)}
           value={data?.username}
         />
       </FormInput>
-      <FormInput label="Password " name_key="Password">
+      <FormInput label="Password">
         <input
           onChange={(e) => handleChangeInput("password")(e.target.value)}
           value={data?.password}
