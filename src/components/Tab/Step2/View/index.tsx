@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { Styles } from "./styles";
-import FormInput from "../../../FormInput";
-import { optionsSelect } from "../../../../constants";
+import { TData, TTemp1, TTemp2, TTemplate } from "@/types";
+import { AppContext } from "@/contexts";
+import { optionsSelect } from "@/constants";
 import Template1 from "./Template1";
-import { TData, TTemp1, TTemp2, TTemplate } from "../../../../types";
 import Template2 from "./Template2";
-import { AppContext } from "../../../../contexts";
+import FormInput from "@/components/FormInput";
 
 type TProps = {
   item: TData;

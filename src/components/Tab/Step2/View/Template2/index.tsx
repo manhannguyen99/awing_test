@@ -1,8 +1,6 @@
-import { useContext } from "react";
-import FormInput from "../../../../FormInput";
+import { TTemp2 } from "@/types";
 import { TProps } from "../Template1";
-import { TTemp2 } from "../../../../../types";
-import { AppContext } from "../../../../../contexts";
+import FormInput from "@/components/FormInput";
 
 const Template2 = ({ item, handleChangeInput }: TProps) => {
   const data = item?.data as TTemp2;

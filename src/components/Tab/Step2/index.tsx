@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from "react";
 import { Styles } from "./styles";
-import { TData, TTab, TTemplate } from "../../../types";
-import Navtab from "../../Navtab";
-import { DEFAULT_VIEW } from "../../../constants";
+import { TData } from "@/types";
+import { AppContext } from "@/contexts";
+import { DEFAULT_VIEW } from "@/constants";
+import { handleCheckError } from "@/utils/helpers";
+import Navtab from "@/components/Navtab";
+import SectionWrapper from "@/components/SectionWrapper";
 import View from "./View";
-import SectionWrapper from "../../SectionWrapper";
-import { handleCheckError } from "../../../utils/helpers";
-import { AppContext } from "../../../contexts";
 
 const Step2 = () => {
   const [store, setStore] = useState<TData[]>([]);

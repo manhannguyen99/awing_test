@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
-import FormInput from "../../../../FormInput";
-import { TData, TTemp1, TTemp2 } from "../../../../../types";
-import { AppContext } from "../../../../../contexts";
+import FormInput from "@/components/FormInput";
+import { TData, TTemp1, TTemp2 } from "@/types";
 
 export type TProps = {
   item: TData;

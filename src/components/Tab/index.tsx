@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { TTab } from "../../types";
 import { styled } from "styled-components";
 import Navtab from "../Navtab";
 import SectionWrapper from "../SectionWrapper";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
+import { TTab } from "@/types";
 
 const Tab = () => {
   const [tab, setTab] = useState<TTab>(0);

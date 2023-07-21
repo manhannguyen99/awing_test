@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import FormInput from "../../FormInput";
-import { AppContext } from "../../../contexts";
-import { TStep0, TTab } from "../../../types";
+
+import FormInput from "@/components/FormInput";
+import { AppContext } from "@/contexts";
+import { TStep0 } from "@/types";
 
 const Step1 = () => {
   const value = React.useContext(AppContext);
